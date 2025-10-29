@@ -1,0 +1,13 @@
+# Environment variables
+NODE_ENV=development
+PORT=3000
+
+# MongoDB connection
+MONGODB_URI=mongodb://localhost:27017/problem5_crud_api
+DB_NAME=problem5_crud_api
+
+# CORS settings
+CORS_ORIGIN=http://localhost:3000
+
+# Logging
+LOG_LEVEL=info
