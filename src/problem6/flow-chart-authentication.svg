@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet">
+  
+  <text x="450" y="30" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Score Update Flow (Detailed)</text>
+  
+  
+  <rect x="50" y="50" width="150" height="60" fill="#e1f5fe" stroke="#01579b" stroke-width="2" />
+  <text x="125" y="75" text-anchor="middle" font-family="Arial" font-size="12">User</text>
+  <text x="125" y="90" text-anchor="middle" font-family="Arial" font-size="10">Action</text>
+  
+  <rect x="250" y="50" width="150" height="60" fill="#e1f5fe" stroke="#01579b" stroke-width="2" />
+  <text x="325" y="75" text-anchor="middle" font-family="Arial" font-size="12">Frontend</text>
+  <text x="325" y="90" text-anchor="middle" font-family="Arial" font-size="10">Client</text>
+  
+  <rect x="450" y="50" width="150" height="60" fill="#e1f5fe" stroke="#01579b" stroke-width="2" />
+  <text x="525" y="75" text-anchor="middle" font-family="Arial" font-size="12">API Gateway</text>
+  
+  <rect x="650" y="50" width="150" height="60" fill="#e1f5fe" stroke="#01579b" stroke-width="2" />
+  <text x="725" y="75" text-anchor="middle" font-family="Arial" font-size="12">Auth Service</text>
+  
+  
+  <path d="M125 110 L125 130 L325 130 L325 110" stroke="#666" stroke-width="2" fill="none" />
+  <text x="225" y="125" text-anchor="middle" font-family="Arial" font-size="10">1. Complete Action</text>
+  <polygon points="325,120 335,130 325,140" fill="#666" />
+  
+  
+  <path d="M325 150 L325 170 L525 170 L525 150" stroke="#666" stroke-width="2" fill="none" />
+  <text x="425" y="165" text-anchor="middle" font-family="Arial" font-size="10">2. POST /scores/update</text>
+  <polygon points="525,160 535,170 525,180" fill="#666" />
+  
+  
+  <path d="M525 190 L525 210 L725 210 L725 190" stroke="#666" stroke-width="2" fill="none" />
+  <text x="625" y="205" text-anchor="middle" font-family="Arial" font-size="10">3. Validate JWT &amp; Action Token</text>
+  <polygon points="725,200 735,210 725,220" fill="#666" />
+  
+  
+  <path d="M725 230 L725 250 L525 250 L525 230" stroke="#666" stroke-width="2" fill="none" />
+  <text x="625" y="245" text-anchor="middle" font-family="Arial" font-size="10">4. Auth Result</text>
+  <polygon points="525,240 515,250 525,260" fill="#666" />
+  
+  
+  <rect x="50" y="300" width="150" height="60" fill="#e8f5e8" stroke="#1b5e20" stroke-width="2" />
+  <text x="125" y="325" text-anchor="middle" font-family="Arial" font-size="12">Score Service</text>
+  
+  <rect x="250" y="300" width="150" height="60" fill="#e8f5e8" stroke="#1b5e20" stroke-width="2" />
+  <text x="325" y="325" text-anchor="middle" font-family="Arial" font-size="12">Database</text>
+  <text x="325" y="340" text-anchor="middle" font-family="Arial" font-size="10">(PostgreSQL)</text>
+  
+  <rect x="450" y="300" width="150" height="60" fill="#e8f5e8" stroke="#1b5e20" stroke-width="2" />
+  <text x="525" y="325" text-anchor="middle" font-family="Arial" font-size="12">Cache</text>
+  <text x="525" y="340" text-anchor="middle" font-family="Arial" font-size="10">(Redis)</text>
+  
+  <rect x="650" y="300" width="150" height="60" fill="#e8f5e8" stroke="#1b5e20" stroke-width="2" />
+  <text x="725" y="325" text-anchor="middle" font-family="Arial" font-size="12">WebSocket</text>
+  <text x="725" y="340" text-anchor="middle" font-family="Arial" font-size="10">Service</text>
+  
+  
+  <path d="M525 270 L525 290 L125 290 L125 270" stroke="#666" stroke-width="2" fill="none" />
+  <text x="325" y="285" text-anchor="middle" font-family="Arial" font-size="10">5. Validate Action &amp; Rate Limits</text>
+  <polygon points="125,280 115,290 125,300" fill="#666" />
+  
+  
+  <path d="M125 360 L125 380 L325 380 L325 360" stroke="#666" stroke-width="2" fill="none" />
+  <text x="225" y="375" text-anchor="middle" font-family="Arial" font-size="10">6. Begin Transaction</text>
+  <polygon points="325,370 335,380 325,390" fill="#666" />
+  
+  
+  <path d="M125 400 L125 420 L325 420 L325 400" stroke="#666" stroke-width="2" fill="none" />
+  <text x="225" y="415" text-anchor="middle" font-family="Arial" font-size="10">7. Update User Score</text>
+  <polygon points="325,410 335,420 325,430" fill="#666" />
+  
+  
+  <path d="M125 440 L125 460 L325 460 L325 440" stroke="#666" stroke-width="2" fill="none" />
+  <text x="225" y="455" text-anchor="middle" font-family="Arial" font-size="10">8. Log Score History</text>
+  <polygon points="325,450 335,460 325,470" fill="#666" />
+  
+  
+  <path d="M325 480 L325 500 L125 500 L125 480" stroke="#666" stroke-width="2" fill="none" />
+  <text x="225" y="495" text-anchor="middle" font-family="Arial" font-size="10">9. Commit Transaction</text>
+  <polygon points="125,490 115,500 125,510" fill="#666" />
+  
+  
+  <path d="M125 520 L125 540 L525 540 L525 520" stroke="#666" stroke-width="2" fill="none" />
+  <text x="325" y="535" text-anchor="middle" font-family="Arial" font-size="10">10. Update Scoreboard Cache</text>
+  <polygon points="525,530 535,540 525,550" fill="#666" />
+  
+  
+  <path d="M125 560 L125 580 L725 580 L725 560" stroke="#666" stroke-width="2" fill="none" />
+  <text x="425" y="575" text-anchor="middle" font-family="Arial" font-size="10">11. Broadcast Score Update</text>
+  <polygon points="725,570 735,580 725,590" fill="#666" />
+  
+  
+  <text x="725" y="610" text-anchor="middle" font-family="Arial" font-size="10">12. Notify All Connected Clients</text>
+</svg>

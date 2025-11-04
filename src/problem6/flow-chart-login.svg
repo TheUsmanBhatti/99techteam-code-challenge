@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Database Transaction Flow</text>
+  
+  <!-- Main Flow -->
+  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="12">Score Update Request</text>
+  <line x1="400" y1="65" x2="400" y2="80" stroke="#666" stroke-width="2"/>
+  
+  <!-- BEGIN TRANSACTION -->
+  <rect x="350" y="80" width="100" height="40" fill="#e8f5e8" stroke="#1b5e20" stroke-width="2"/>
+  <text x="400" y="100" text-anchor="middle" font-family="Arial" font-size="12">BEGIN TRANSACTION</text>
+  <line x1="400" y1="120" x2="400" y2="140" stroke="#666" stroke-width="2"/>
+  
+  <!-- SELECT user_data -->
+  <rect x="350" y="140" width="100" height="40" fill="#e8f5e8" stroke="#1b5e20" stroke-width="2"/>
+  <text x="400" y="155" text-anchor="middle" font-family="Arial" font-size="10">SELECT user_data</text>
+  <text x="400" y="170" text-anchor="
